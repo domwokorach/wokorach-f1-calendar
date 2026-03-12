@@ -1,0 +1,81 @@
+{
+  "name": "wokorach-f1-calendar",
+  "version": "1.0.0",
+  "description": "_The second edition of [f1calendar.com](https://f1calendar.com)_",
+  "keywords": [],
+  "homepage": "https://github.com/sportstimes/f1#readme",
+  "bugs": {
+    "url": "https://github.com/sportstimes/f1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ay8s@github.com/sportstimes/f1.git"
+  },
+  "license": "ISC",
+  "author": "dominic-wokorach-o",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+  "test": "jest --config jest.config.cjs",
+  "test:watch": "jest --config jest.config.cjs --watch",
+  "test:ci": "jest --config jest.config.cjs --ci",
+    "setPublicAssets": "node build/public-assets.js",
+    "generateCalendars": "node build/generate-calendars.js",
+    "generateQueues": "node build/generate-queues.mjs"
+  },
+  "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.5",
+    "@novu/node": "^2.0.1",
+    "@tailwindcss/postcss": "^4.0.0",
+    "countries-and-timezones": "^3.2.3",
+    "dayjs": "^1.11.5",
+    "firebase": "^12.4.0",
+    "firebase-admin": "^10.3.0",
+    "google-auth-library": "^10.4.1",
+    "i": "^0.3.7",
+    "ics": "^3.4.0",
+    "ignore-loader": "^0.1.2",
+    "loader-utils": "^3.2.1",
+    "localforage": "^1.10.0",
+    "next": "^16.0.7",
+    "next-intl": "^4.5.8",
+    "next-plausible": "^3.11.3",
+    "next-seo": "^7.0.1",
+    "nextjs": "0.0.3",
+    "postmark": "^4.0.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "terser-webpack-plugin": "^5.2.4",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-react": "^7.13.13",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.0",
+    "@types/jest": "^30.0.0",
+  "@testing-library/jest-dom": "^6.8.0",
+  "@testing-library/react": "^16.3.0",
+  "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.0.1",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^16.0.7",
+    "eslint-config-prettier": "^10.0.1",
+    "jest": "^30.3.0",
+  "jest-environment-jsdom": "^30.3.0",
+    "next-translate-plugin": "^2.6.1",
+    "postcss": "^8.4.28",
+    "prettier": "^3.0.2",
+    "tailwindcss": "^4.0.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.0.4",
+    "webpack": "^5.90.3"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

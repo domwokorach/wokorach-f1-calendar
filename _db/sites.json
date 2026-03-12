@@ -1,0 +1,39 @@
+{
+  "sites": [
+    {
+      "name": "F1",
+      "url": "https://f1calendar.com",
+      "siteKey": "f1"
+    },
+    {
+      "name": "F2",
+      "url": "https://f2calendar.com",
+      "siteKey": "f2"
+    },
+    {
+      "name": "F3",
+      "url": "https://f3calendar.com",
+      "siteKey": "f3"
+    },
+    {
+      "name": "Formula E",
+      "url": "https://formulaecal.com",
+      "siteKey": "fe"
+    },
+    {
+      "name": "IndyCar",
+      "url": "https://indycarcalendar.com",
+      "siteKey": "indycar"
+    },
+    {
+      "name": "MotoGP",
+      "url": "https://motogpcal.com",
+      "siteKey": "motogp"
+    },
+    {
+      "name": "F1 Academy",
+      "url": "https://f1academycalendar.com",
+      "siteKey": "f1-academy"
+    }
+  ]
+}

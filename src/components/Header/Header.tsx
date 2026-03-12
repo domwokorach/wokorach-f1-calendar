@@ -1,0 +1,62 @@
+import React from "react";
+import Logo from "../Logo/Logo";
+import {useTranslations} from 'next-intl';
+// import i18nConfig from "../../i18n.js";
+import Link from "next/link";
+import usePlausible from "next-plausible";
+import Image from 'next/image';
+import CTABar, { MobileMenuButton } from "../CTABar/CTABar";
+import SupportButton from "../SupportButton/SupportButton";
+import { getSiteKey } from "../../lib/site";
+
+const Header = ({ year, showCTABar }: { year: number; showCTABar: boolean }) => {
+	const t = useTranslations('All');
+	const siteKey = getSiteKey();
+	const title = t(`${siteKey}.title`);
+	const subtitle = t(`${siteKey}.subtitle`);
+
+	return (
+		<div className="w-full bg-dark-green mb-4">
+			<header className="max-w-screen-lg mx-auto font-sans py-4 px-2">
+				{/* Mobile: Menu button positioned absolutely in top-left */}
+				{showCTABar && (
+					<div className="md:hidden absolute left-2 top-4 z-50">
+						<MobileMenuButton />
+					</div>
+				)}
+
+				<div className="flex md:justify-between">
+					<div className="flex flex-col md:flex-row justify-center items-center md:justify-between w-full md:w-auto py-4 md:py-0 md:mb-4">
+						<Link href="/" className="" style={{width: "60px"}} title={title}>
+							<Logo />
+						</Link>
+
+						<div className="text-center md:text-left uppercase mt-4 md:mt-0 md:ml-4">
+							<h1 className="mb-1 text-lg tracking-wider">
+								<Link href="/" title={title} className="text-white hover:text-white font-bold text-xl"
+									>
+									{title}&nbsp;
+									{year && (
+										<span>{year}</span>
+									)}
+								</Link>
+							</h1>
+							<h2 className="text-sm font-normal tracking-wider">
+								<Link href="/" title={title} className="text-light-green hover:text-light-green">
+									{subtitle}
+								</Link>
+							</h2>
+						</div>
+					</div>
+
+					<div className="hidden md:inline-block">
+						<SupportButton />
+					</div>
+				</div>
+				{showCTABar && <CTABar />}
+			</header>
+		</div>
+	);
+};
+
+export default Header;
