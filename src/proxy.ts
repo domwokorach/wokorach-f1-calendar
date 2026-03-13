@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 
-export default createMiddleware({
+const intlMiddleware = createMiddleware({
   // A list of all locales that are supported
   locales: [
     "ar",
@@ -42,6 +42,11 @@ export default createMiddleware({
   defaultLocale: 'en',
   localePrefix: 'as-needed'
 });
+
+// Next.js 16: renamed from `middleware` to `proxy`
+export function proxy(request: import('next/server').NextRequest) {
+  return intlMiddleware(request);
+}
 
 export const config = {
   // Match only internationalized pathnames
