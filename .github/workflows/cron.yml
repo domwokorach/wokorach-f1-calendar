@@ -1,0 +1,10 @@
+name: minute-cron
+on:
+  schedule:
+    - cron: '* * * * *' # This runs every minute
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel Endpoint
+        run: curl -X GET https://vercel.app
